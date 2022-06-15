@@ -24,23 +24,15 @@ public class CSVFileController {
 			try {
 				service.save(file);
 				message = "Uploaded the file successfully: " + file.getOriginalFilename();
-				/*
-				 * return ResponseEntity.status(HttpStatus.OK).body(new
-				 * ResponseMessage(message));
-				 */
 				return ResponseEntity.status(HttpStatus.OK)
 						.body(new ResponseMessage(message, file.getContentType(), String.valueOf(file.getSize()), 200));
 			} catch (Exception e) {
 				message = "Could not upload the file: " + file.getOriginalFilename() + "!";
-				// return ResponseEntity.status(HttpStatus.EXPECTATION_FAILED).body(new
-				// ResponseMessage(message));
 				return ResponseEntity.status(HttpStatus.EXPECTATION_FAILED)
 						.body(new ResponseMessage(message, file.getContentType(), String.valueOf(file.getSize()), 500));
 			}
 		}
 		message = "Please upload a csv file!";
-		// return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new
-		// ResponseMessage(message));
 		return ResponseEntity.status(HttpStatus.BAD_REQUEST)
 				.body(new ResponseMessage(message, file.getContentType(), String.valueOf(file.getSize()), 400));
 	}
