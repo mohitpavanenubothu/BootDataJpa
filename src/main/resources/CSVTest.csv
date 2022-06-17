@@ -1,0 +1,12 @@
+personId,personName,mobileno,policyId,amount,accountType
+1,SUNIL,1234567890,policyId1,1,savings
+2,PRASAD,1234567891,policyId2,2,savings
+3,SATYA,1234567892,policyId3,3,savings
+4,MOHIT,1234567893,policyId4,4,savings
+5,SUVARNA,1234567894,policyId5,5,savings
+6,KARTHIK,1234567895,policyId6,6.5,savings
+7,PAVAN,1234567896,policyId7,70,savings
+8,VINAY,1234567897,policyId8,80,savings
+9,NARAYANA,1234567898,policyId9,9,savings
+10,SURYA,1234567899,policyId10,10,savings
+11,RAJU,1234567811,policyId11,11,savings
