@@ -28,7 +28,7 @@ public class FileProcessingController {
 				if (status) {
 					message = "Uploaded the file successfully: " + file.getOriginalFilename();
 					return ResponseEntity.status(HttpStatus.OK).body(
-							new ResponseMessage(message, file.getContentType(), String.valueOf((file.getSize()/102)+" KB"), 200));
+							new ResponseMessage(message, file.getContentType(), String.valueOf((file.getSize()/1024)+" KB"), 200));
 
 				} else {
 					message = "Could not upload the file: " + file.getOriginalFilename();
